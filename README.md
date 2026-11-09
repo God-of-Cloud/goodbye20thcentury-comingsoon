@@ -20,7 +20,7 @@ React 19, TypeScript, Vite 8, and lazy-loaded Three.js device viewers, built for
 ## Included interactions
 
 - Muse: three-image homepage gallery and an extended image gallery in project notes.
-- Hodeye: approved photography, wordmark, artwork, and an editorial/illustration gallery.
+- Hodeye: a ten-chapter editorial case study, from approved identity and optional brand motion through illustration, original action states, actual website captures, fresh native Home/Chat/Profile captures, proposed product choices, and an apparel mockup. Mobile shows one readable native screen at a time.
 - 35MM: a playable local film with pause, seek, restart, skip, mute, expand, close, and reopen controls. The footage is a placeholder for the project.
 - Skeepers Sentinel: draggable macOS-style windows, close/minimize/restore/expand controls, a dock, terminal commands, Telegram messages, bot information, and the original notification. The simulation never contacts Telegram or Skeepers. Use `help`, `run`, `test`, `status`, or `clear` in the terminal. Mobile includes an accessible test-sequence button below the desktop.
 - Amharist: an interactive typographic book study with three letters, used as a temporary visual.
@@ -29,12 +29,14 @@ React 19, TypeScript, Vite 8, and lazy-loaded Three.js device viewers, built for
 - Editorial App Store links for Muse and 35MM appear in both homepage rows and project dialogs.
 - Keyboard-accessible project-note dialogs, mobile navigation, mail links, and back-to-top navigation.
 
-Expanded case studies are deliberately left for the next stage; the homepage’s project buttons currently open concise project notes.
+Hodeye has an expanded editorial case study inside the white project dialog. Other project buttons open concise project notes.
 
 ## Files
 
 - `app/page.tsx`: homepage, project content, galleries, about panel, and dialogs.
 - `app/globals.css`: visual design, responsive rules, and reduced-motion support.
+- `components/portfolio/HodeyeEditorialGallery.tsx` and `hodeye-editorial.css`: Hodeye’s responsive ten-chapter editorial gallery.
+- `docs/hodeye-editorial.md`: capture provenance, editorial decisions, and disclosure details.
 - `components/portfolio/FilmPlayer.tsx`: working video study.
 - `components/portfolio/DeviceIndicator.tsx` and `device-scene.ts`: on-demand 3D loading, screen materials, rotation, and cleanup.
 - `components/portfolio/AppStoreLink.tsx`: App Store destinations and CTA copy.
