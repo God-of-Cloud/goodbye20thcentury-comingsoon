@@ -15,7 +15,7 @@ npm run dev
 
 ## Stack
 
-React 19, TypeScript, and Vite 8, built for Cloudflare Pages. Plain authored CSS provides the responsive layouts, editorial typography, application windows, and motion. Fonts are served locally. No external image service or CDN is required.
+React 19, TypeScript, Vite 8, and lazy-loaded Three.js device viewers, built for Cloudflare Pages. Plain authored CSS provides the responsive layouts, editorial typography, application windows, and motion. Fonts are served locally. No external image service or CDN is required.
 
 ## Included interactions
 
@@ -24,6 +24,9 @@ React 19, TypeScript, and Vite 8, built for Cloudflare Pages. Plain authored CSS
 - 35MM: a playable local film with pause, seek, restart, skip, mute, expand, close, and reopen controls. The footage is a placeholder for the project.
 - Skeepers Sentinel: draggable macOS-style windows, close/minimize/restore/expand controls, a dock, terminal commands, Telegram messages, bot information, and the original notification. The simulation never contacts Telegram or Skeepers. Use `help`, `run`, `test`, `status`, or `clear` in the terminal. Mobile includes an accessible test-sequence button below the desktop.
 - Amharist: an interactive typographic book study with three letters, used as a temporary visual.
+- Compact 3D device studies: the supplied iPhone 18 Pro and closed iPhone Duo for Muse, Hodeye, and Amharist; the supplied MacBook Pro for 35MM. Drag horizontally or use arrow keys to rotate, and use Home or the reset control to return to the initial view. No Duo hinge animation.
+- Muse and Hodeye devices use the four supplied, unmodified UI screenshots. Amharist and the MacBook retain their original model screen artwork until project screenshots are available.
+- Editorial App Store links for Muse and 35MM appear in both homepage rows and project dialogs.
 - Keyboard-accessible project-note dialogs, mobile navigation, mail links, and back-to-top navigation.
 
 Expanded case studies are deliberately left for the next stage; the homepage’s project buttons currently open concise project notes.
@@ -33,11 +36,17 @@ Expanded case studies are deliberately left for the next stage; the homepage’s
 - `app/page.tsx`: homepage, project content, galleries, about panel, and dialogs.
 - `app/globals.css`: visual design, responsive rules, and reduced-motion support.
 - `components/portfolio/FilmPlayer.tsx`: working video study.
+- `components/portfolio/DeviceIndicator.tsx` and `device-scene.ts`: on-demand 3D loading, screen materials, rotation, and cleanup.
+- `components/portfolio/AppStoreLink.tsx`: App Store destinations and CTA copy.
+- `public/assets/devices/`: web-ready GLB copies of the supplied USDZ geometry and unchanged screen PNGs.
+- `scripts/export-devices.py`: Blender conversion script (requires the locally imported `.blend` source copies).
 - `components/portfolio/SentinelDesktop.tsx`: self-contained desktop simulation.
 - `public/assets/`: copied project assets and local fonts.
 - `design-review/asset-provenance.json`: original source paths and SHA-256 hashes.
 
-All 18 sourced assets were copied byte for byte. Original files were preserved; no background removal or image retouching was needed. Images are sized and framed using CSS. Asset contact sheets in `design-review/` are inspection artifacts and are not used by the website.
+The original 18 sourced image/font/branding assets and four new UI screenshots were copied byte for byte. Device models were converted from the supplied USDZ files to GLB copies with Blender; original geometry, materials, and UVs are retained, with one Pro device selected from the supplied two-device presentation. Screens are textured on the original display meshes at runtime. Models and the Three.js viewer load near the viewport; rendering stops when idle or offscreen.
+
+The original 18 sourced assets were copied byte for byte. Original files were preserved; no background removal or image retouching was needed. Images are sized and framed using CSS. Asset contact sheets in `design-review/` are inspection artifacts and are not used by the website.
 
 ## Validation
 
@@ -46,7 +55,7 @@ npm run typecheck
 npm run build
 ```
 
-The homepage was reviewed in Safari at desktop size and in a 390px responsive viewport. Galleries, project dialogs, terminal commands, the scripted campaign sequence, and notification handoff were exercised in the browser.
+The homepage was reviewed in Safari at desktop size and in a 390px responsive viewport. Galleries, project dialogs, terminal commands, the scripted campaign sequence, and notification handoff were exercised in the browser. The 3D update was reviewed at desktop and 390px widths, including drag rotation, real Muse/Hodeye screen mapping, MacBook screen artwork, and App Store links in both homepage rows and dialogs. The dependency lockfile also passed an npm 10 Linux clean-install dry run.
 
 ## Publishing updates
 

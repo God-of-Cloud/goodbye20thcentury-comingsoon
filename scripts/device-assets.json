@@ -1,0 +1,54 @@
+{
+  "models": [
+    {
+      "file": "pro.glb",
+      "meshCount": 94,
+      "screens": 1,
+      "animations": 0,
+      "bytes": 5143152,
+      "sha256": "a3dda01ca9273ab671e955684683d186c1a9fa732fde4973c82339185ab0304e"
+    },
+    {
+      "file": "duo.glb",
+      "meshCount": 73,
+      "screens": 1,
+      "animations": 0,
+      "bytes": 9266384,
+      "sha256": "ca44557fd0169077691e8c862043cd72440e8e9ddac2796131aeffdcf241611e"
+    },
+    {
+      "file": "macbook.glb",
+      "meshCount": 89,
+      "screens": 1,
+      "animations": 0,
+      "bytes": 9812388,
+      "sha256": "b247923ee1737e8d0aae509627d402c15037e5f4cdde8fc127e27ca67846d3cf"
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "hodeye-pro.png",
+      "source": "Screenshot iPhone 18 Pro Max 10-24-2026 at 10.52.17\u202fAM.png",
+      "sha256": "321e09707f1a41f11ed0b6fe27a61082193ede385d2da64849ee5a3bfac2c4a5",
+      "unchanged": true
+    },
+    {
+      "file": "muse-pro.png",
+      "source": "Screenshot iPhone 18 Pro Max 11-09-2026 at 12.07.33\u202fAM.png",
+      "sha256": "fc876e52a5114142f45d568ae57413739d96e6b76a64458871cf43682e864e96",
+      "unchanged": true
+    },
+    {
+      "file": "hodeye-duo.png",
+      "source": "Screenshot iPhone Duo 11-09-2026 at 12.09.14\u202fAM.png",
+      "sha256": "3362912406df24f7b68ef77950627d76a32574d9090d3f4627351b977bce8d37",
+      "unchanged": true
+    },
+    {
+      "file": "muse-duo.png",
+      "source": "Screenshot iPhone Duo 11-09-2026 at 12.11.10\u202fAM.png",
+      "sha256": "4446951de6bb43ac479cdad28c269f224a12543aed5036682348e186383eb963",
+      "unchanged": true
+    }
+  ]
+}
