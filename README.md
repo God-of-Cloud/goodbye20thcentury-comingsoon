@@ -26,7 +26,7 @@ React 19, TypeScript, Vite 8, and lazy-loaded Three.js device viewers, built for
 - Amharist: an interactive typographic book study with three letters, used as a temporary visual.
 - Compact 3D device studies: the supplied iPhone 18 Pro and closed iPhone Duo for Muse, Hodeye, and Amharist; the supplied MacBook Pro for 35MM. Drag horizontally or use arrow keys to rotate, and use Home or the reset control to return to the initial view. No Duo hinge animation.
 - Muse and Hodeye devices use the four supplied, unmodified UI screenshots. Amharist and the MacBook retain their original model screen artwork until project screenshots are available.
-- Editorial App Store links for Muse and 35MM appear in both homepage rows and project dialogs.
+- Editorial App Store links for Muse and 35MM appear in both homepage rows and project dialogs. Muse also links to its existing full end-to-end product case study. Hodeye links to its editorial and dating websites from the homepage, dialog introduction and relevant gallery chapters.
 - Keyboard-accessible project-note dialogs, mobile navigation, mail links, and back-to-top navigation.
 
 Hodeye has an expanded editorial case study inside the white project dialog. Other project buttons open concise project notes.

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight, Pause, Play } from "lucide-react";
+import ProjectDestinationLink from "./ProjectDestinationLink";
 
 const base = "/assets/hodeye/editorial/";
 const chapters = [
@@ -103,7 +104,7 @@ export default function HodeyeEditorialGallery() {
     <div key={index} className={`he-frame he-frame-${index+1}`} role="group" aria-roledescription="slide" aria-label={`${index+1} of 10: ${chapter.title}`}>
       {index === 0 ? <Identity/> : index === 1 ? <BrandSystem/> : index === 2 ? <div className="he-illustration he-stage"><img src={base + "characters.png"} alt="The full approved Hodeye illustration collage, celebrating music, movement and creative life"/></div> : index === 3 ? <ActionSystem/> : index === 4 ? <Journal/> : index === 5 ? <DatingWebsite/> : index === 6 ? <NativeScreens/> : index === 7 ? <NativeScreens conversation/> : index === 8 ? <ProductChoices/> : <div className="he-apparel he-stage"><span className="he-corner-label">Beyond the screen / Apparel mockup</span><img src={base + "apparel.jpg"} alt="The full portrait apparel mockup: a sitter in a black Hodeye T-shirt with a restrained photographic print"/></div>}
     </div>
-    <div className="he-caption"><span className="he-count">{String(index+1).padStart(2,"0")} / 10</span><div className="he-caption-copy"><p>{chapter.caption}</p><span>{chapter.status}</span></div><div className="gallery-arrows"><button aria-label="Previous Hodeye chapter" onClick={() => change(-1)}><ArrowLeft size={18}/></button><button aria-label="Next Hodeye chapter" onClick={() => change(1)}><ArrowRight size={18}/></button></div></div>
+    <div className="he-caption"><span className="he-count">{String(index+1).padStart(2,"0")} / 10</span><div className="he-caption-copy"><p>{chapter.caption}</p><span>{chapter.status}</span>{(index === 4 || index === 5) && <div className="he-destination"><ProjectDestinationLink destination={index === 4 ? "journal" : "dating"}/></div>}</div><div className="gallery-arrows"><button aria-label="Previous Hodeye chapter" onClick={() => change(-1)}><ArrowLeft size={18}/></button><button aria-label="Next Hodeye chapter" onClick={() => change(1)}><ArrowRight size={18}/></button></div></div>
     <nav className="he-chapter-index" aria-label="Hodeye chapters">{chapters.map((item,i) => <button key={item.title} aria-label={`${String(i+1).padStart(2,"0")} — ${item.title}`} aria-current={i === index ? "step" : undefined} onClick={() => setIndex(i)}>{String(i+1).padStart(2,"0")}</button>)}</nav>
   </section>;
 }
